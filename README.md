@@ -27,16 +27,19 @@ tumors by observing the ab-normal breast tissues.
 
 ### Features
 
-- Predict a patient has cancer or not.
+- redict a patient has cancer or not.
 <p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ## Limitation:
 
 - As the dataset is huge around 278k images. We pick only 4000 images where 2000 are negative and 2000 are positive.
 
-- Due to limitation of moodle upload size, This pretrained model **"VGG16_model.h5"** won't be upload in moodle. But,
-  you can download this from
-  [Google Drive](https://drive.google.com/drive/folders/1HPAyBmDlJ3GUN2ZAB1WJgu84VqVX6-b6?usp=sharing).
+- Due to limitation of moodle upload size, This pretrained model **"VGG16_model.h5"**, **"inceptionv3_model.h5"** and *"resNET_model.pth"* won't be upload in moodle. But,
+  you can download them from
+  [Google Drive_VGG](https://drive.google.com/drive/folders/1HPAyBmDlJ3GUN2ZAB1WJgu84VqVX6-b6?usp=sharing).
+[Google Drive_ResNet](https://drive.google.com/file/d/1OB7g7CVtS0IsxxjfjrrRsW-c1j3g5gTO/view?usp=sharing).
+[Google Drive_Inception](https://drive.google.com/file/d/1SnyOtM18yHVuaN_gXroQ2_FToCT4NfqA/view?usp=sharing).
+
 
 ### Framework/Libraries
 
@@ -66,11 +69,22 @@ Instructions to setup this project online.
    base_path = "/content/gdrive/MyDrive/Colab Notebooks/breast_cancer"
 ```
 
+- Enable this part to import the dependend .py files
+```
+import sys 
+sys.path.append('Insert_Project_path') #/content/gdrive/MyDrive/Colab Notebooks/breast_cancer/
+
+ResNET = !cp r"/content/gdrive/MyDrive/Colab Notebooks/breast_cancer/ResNET.py"
+helper_functions = !cp r"/content/gdrive/MyDrive/Colab Notebooks/breast_cancer/helper_functions.py"
+
+```
+
+
 ### Local
 
 Instructions to setup this project locally. To get a local copy up and running follow these simple example steps.
 
-- Download the whole projec from
+- Download the whole project from
   [Google Drive](https://drive.google.com/drive/folders/1HPAyBmDlJ3GUN2ZAB1WJgu84VqVX6-b6?usp=sharing).
 - Change the 'base_path' according to your project directory.
 
@@ -78,6 +92,15 @@ Example give below:
 
 ```
 base_path = "D:/university/concordia/Winter 22/Machine Learning/Project/breast cancer"
+```
+- Disable this part. It's only needed for online execution:
+```
+import sys 
+sys.path.append('Insert_Project_path') #/content/gdrive/MyDrive/Colab Notebooks/breast_cancer/
+
+ResNET = !cp r"/content/gdrive/MyDrive/Colab Notebooks/breast_cancer/ResNET.py"
+helper_functions = !cp r"/content/gdrive/MyDrive/Colab Notebooks/breast_cancer/helper_functions.py"
+
 ```
 
 <p align="right">(<a href="#top">👆🏻</a>)</p>
@@ -88,8 +111,8 @@ Contributions are what make the open source community such an amazing place to l
 contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a
-<a href="https://github.com/nimmitahsin1727/breast-cancer-classification/pulls">Pull Request</a>. You can also simply open an issue
-with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+<a href="https://github.com/nimmitahsin1727/breast-cancer-classification/pulls">Pull Request</a>. You can also simply
+open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
 1. Faiza Tahsin - Resposible for VGG16
 2. Zarin Tasnim - Resposible for Inception-V3
